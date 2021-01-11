@@ -22,10 +22,10 @@ int main()
   float e = 43.2;
 
   printf("The value of d is %f\n", d);
-  printf("The address of d is %p\n", &d);
+  printf("The address of d is %p\n", (void*)&d);
 
   printf("The value of e is %f\n", e);
-  printf("The address of e is %p\n", &e);
+  printf("The address of e is %p\n", (void*)&e);
 
   float* ptrtod = &d;
   float* ptrtoe = &e;
