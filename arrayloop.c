@@ -12,13 +12,12 @@ void getTestInput(int argc, char* argv[], int* a, int* b)
 
 
 // add your arrayAdd function here
-int arrayAdd(int arr[], int size, int inc)
+void arrayAdd(int* arrptri, int size, int inc)
 {
   for (int i = 0; i < size; i++) {
-    arr[i] = arr[i] + inc;
-  
+    *arrptri = *arrptri + inc;
+    arrptri++;
   }
-  return 0;
 }
 
 
@@ -41,10 +40,13 @@ int main(int argc, char* argv[])
   // - pass the array to arrayAdd to add the increment of inc
   // - print out the array
 int arr[size];
+int *p = arr;
+int i;
 
 for (int i = 0; i < size; i++) {
   arr[i] = i * i;
-  return 0;
+  arrayAdd(p, size, inc);
+printf("%d\n", arr[i]); 
 }
 
 }
