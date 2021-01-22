@@ -3,7 +3,6 @@
 
 #include "student.h"
 
-
 const int BUFFSIZE=256;
 char inputBuff[256];
 
